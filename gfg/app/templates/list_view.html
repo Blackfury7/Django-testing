@@ -1,0 +1,24 @@
+{% load static %}
+ <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<div class="main">
+
+	{% for data in dataset %}
+
+	{{ data.title }}<span>     </span><a class="btn-1" href="{{data.id}}/update/" type="submit" value="update">udpate</a><a class="btn-1" href="{{data.id}}/delete/" type="submit" value="delete">Delete</a><br/>
+	{{ data.description }}<br/>
+	<hr/>
+
+	{% endfor %}
+
+</div>
+<div>
+	<form method="POST">
+		<!-- Security token by Django -->
+		{% csrf_token %}
+
+		
+
+		<a class="btn-1" href="add/" type="submit" value="Add">add</a>
+	</form>
+</div>
+</div>

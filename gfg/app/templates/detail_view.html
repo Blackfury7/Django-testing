@@ -1,0 +1,12 @@
+ {% load static %}
+ <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<div class="main">
+
+	
+	<!-- Specify fields to be displayed -->
+	{{ data.title }}<br/>
+	{{ data.description }}<br/>
+	<a class="btn-1" href="{{data.id}}/delete/" type="submit" value="delete">Delete</a>
+	<a class="btn-1" href="{{data.id}}/update/" type="submit" value="update">udpate</a>
+
+</div>
